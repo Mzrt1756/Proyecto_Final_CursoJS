@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0; }
+
+#coverInicio{
+    background-image: url(../img/Pasteleria.jpeg);
+    background-color: #cccccc;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center; 
+}
+
+.coverText{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.imgHero1, .imgHero2{
+    min-width: 300px;
+    min-height: 300px;
+}
+
+.nav-link{
+    color: black;
+}
+
+.nav-link:hover{
+    color: #fd7e14 !important;
+}
+
+.nav-link.active:hover{
+    color: white !important;
+}
+
+.active, .btn{
+    background-color: #fd7e14 !important;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+    background-color: #fd7e14  !important;
+}
+
+.accordion-button:not(.collapsed) {
+    color: white;
+    background-color: #fd7e14;
+    
+}
+  
+.accordion-button:not(.collapsed)::after{
+    filter: brightness(0%) invert(70%);
+}
+
+.accordion-button:not:focus{
+    box-shadow:  0 .5rem 1rem rgba(black, .15);
+    border-color: #fd7e14;
+}
+
+.accordion-button:focus{
+	border-color: black;
+	background-color: #fd7e14;
+	box-shadow: 0 0.20em 8px 0px #fd7e14, 0 2px 10px 2.5px rgba(0, 0, 0, 0.50);
+    color: white;
+}
+
+
+@media screen and (max-width: 639px) {
+    
+    #noDesplegable{
+        display: none !important;
+    }
+
+    .card-cover{
+        height: 300px ;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center; 
+    }
+    
+}
+
+@media screen and (min-width: 640px) {
+    #desplegable{
+        display: none !important;
+    }
+
+    .card-cover{
+        height: 400px !important;
+        max-width: 450px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center; 
+    }
+
+    #tarjetaComida{
+        max-height: 550px;
+    }
+
+    #descripcionComida{
+        overflow: scroll;
+        height: 75px;
+    }
+
+    #precioComida{
+        height: 40px;
+    }
+}

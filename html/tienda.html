@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Pastelería Antosanías</title>
+</head>
+<body>
+  <header class="container-fluid p-0 bg-light">
+    <nav id="noDesplegable" class="d-flex flex-wrap justify-content-center p-2 border-bottom bg-light fixed-top">
+      <a href="../index2.html" class="d-flex align-items-center mb-2 mb-md-0 me-md-auto text-dark text-decoration-none">
+        <img class="logo" src="../img/Logo.png" alt="" height="40">
+      </a>
+
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="../index2.html" class="nav-link" >Inicio</a></li>
+        <li class="nav-item"><a href="../index2.html" class="nav-link">Acerca de</a></li>
+        <li class="nav-item"><a href="../index2.html" class="nav-link">Productos</a></li>
+        <li class="nav-item"><a href="../index2.html" class="nav-link">¿Cómo comprar?</a></li>
+        <li class="nav-item"><a href="../index2.html" class="nav-link">Contacto</a></li>
+        <li class="nav-item"><a href="tienda.html" class="nav-link" aria-current="page">Tienda</a></li>
+      </ul>
+    </nav>
+    <nav id="desplegable" class="p-2  row">
+        <a href="../index2.html" class="col-9 align-items-center mb-md-0 me-md-auto text-dark text-decoration-none">
+          <img class="logo" src="../img/Logo.png" alt="" height="40">
+        </a> 
+        <div class="col-3 dropdown d-flex justify-content-end">
+          <img id="dropdownNavLink" src="../img/icondropdown32.png" alt="icono de menu desplegable" data-bs-toggle="dropdown" aria-expanded="true">
+          <ul class="dropdown-menu text-small shadow col-9 ">
+            <li><a href="../index2.html" class="dropdown-item" >Inicio</a></li>
+            <li><a href="../index2.html" class="dropdown-item">Acerca de</a></li>
+            <li><a href="../index2.html" class="dropdown-item">Productos</a></li>
+            <li><a href="../index2.html" class="dropdown-item">¿Cómo comprar?</a></li>
+            <li><a href="../index2.html" class="dropdown-item">Contacto</a></li>
+            <li><a href="tienda.html" class="dropdown-item">Tienda</a></li>
+          </ul>
+        </div>         
+    </nav>
+  </header>
+    <section>
+        <div class="container mt-3">
+          <h2 id="buscar" class="display-7 fw-bold lh-1 mb-3 text-center">Elige tu Regalo Preferido</h2>
+          <input class="form-control" id="myInput" type="text" placeholder="Buscar.." onkeyup="buscador()">
+        </div>
+        <div id="divTienda" class="row mx-2 my-3 g-2">
+              <main id="items" class="col-sm-9 row">
+                <div class="container">
+                  <div id="rowTienda" class="row">
+                   
+                    
+                  </div>
+                </div>
+              </main>
+
+              <!-- Carrito -->
+                <aside class="col-sm-3">
+                    <h2 class="display-7 fw-bold lh-1">Carrito</h2>
+                    <!-- Elementos del carrito -->
+                    <ul id="carrito" class="list-group"></ul>
+                    <hr>
+                    <!-- Precio total -->
+                    <p class="text-right">Total: $ <span id="total"></span> Pesos</p>
+                    <button id="botonVaciar" class="btn btn-primary px-4 my-2 me-md-2 shadow-lg">Vaciar</button>
+                    <button id="botonComprar" class="btn btn-primary px-4 my-2 me-md-2 shadow-lg">Comprar</button>
+                </aside>
+          </div>
+      </section>
+      <footer class="py-2 my-2 container-fluid">
+        <ul class="nav justify-content-center border-bottom pb-2 mb-2">
+          <li class="nav-item"><a href="../index2.html" class="nav-link px-2 text-muted">Inicio</a></li>
+          <li class="nav-item"><a href="../index2.html" class="nav-link px-2 text-muted">Acerca De</a></li>
+          <li class="nav-item"><a href="../index2.html" class="nav-link px-2 text-muted">Productos</a></li>
+          <li class="nav-item"><a href="../index2.html" class="nav-link px-2 text-muted">¿Cómo Comprar?</a></li>
+          <li class="nav-item"><a href="../index2.html" class="nav-link px-2 text-muted">Contacto</a></li>
+          <li class="nav-item"><a href="tienda.html" class="nav-link px-2 text-muted">Tienda</a></li>
+        </ul>
+        <div class="row justify-content-between">
+          <span class="col-6 text-muted">© 2022 Antosanías</span>
+          <div class="col-6">
+            <ul class="nav list-unstyled justify-content-end">
+              <li class="ms-3"><a href="https://web.whatsapp.com/"><img src="../img/iconwhatsapp32.png" alt="icono de whatsapp"></a></li>
+              <li class="ms-3"><a href="https://es-la.facebook.com/"><img src="../img/iconfacebook32.png" alt="icono de facebook"></a></li>
+              <li class="ms-3"><a href="https://www.instagram.com/"><img src="../img/iconinstagram32.png" alt="icono de instagram"></a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    <script src="../js/main.js"></script>
+    <script>// Buscar productos por nombre o precio
+      function buscador() {
+          let inputBuscador = document.getElementById("myInput");
+          let filtroBuscador= inputBuscador.value.toUpperCase();
+          let divRowTienda = document.getElementById("rowTienda");
+          let tituloProducto;
+          let descripcionProducto;
+          div = divRowTienda.getElementsByTagName("div");
+          for (let i = 0; i < div.length; i++) {
+            tituloProducto = div[i].getElementsByTagName("h5")[0];
+            descripcionProducto = div[i].getElementsByTagName("p")[0];
+            if (tituloProducto || descripcionProducto) {
+              let palabrasEnFiltro = filtroBuscador.split(' ');
+              let encontrado = 0;
+              for (let filtro of palabrasEnFiltro) {
+                if (tituloProducto.innerHTML.toUpperCase().indexOf(filtro) > -1 || descripcionProducto.innerHTML.toUpperCase().indexOf(filtro)  > -1) {
+                  encontrado++;
+                }
+              }
+        
+              if (encontrado === palabrasEnFiltro.length) {
+                div[i].style.display = "";
+              } else {
+                div[i].style.display = "none";
+              }
+        
+            }
+          }
+        
+      }</script>
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+      <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+</html>
